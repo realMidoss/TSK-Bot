@@ -7,13 +7,12 @@ import os
 from cogs.Turkish import TRCog
 from cogs.sub import subCog
 from cogs.em import emCog
-from cogs.economy import BeansEconomyCog
 
-bot = commands.Bot(command_prefix=[", ", "Asker " ], help_command=None, allowed_mentions=discord.AllowedMentions(roles=False, users=False, everyone=False))
+bot = commands.Bot(command_prefix=[", ", "Asker "], help_command=None, allowed_mentions=discord.AllowedMentions(roles=False, users=False, everyone=False))
+
 bot.add_cog(TRCog(bot))
 bot.add_cog(subCog(bot))
 bot.add_cog(emCog(bot))
-bot.add_cog(BeansEconomyCog(bot, DATABASE_URL))
 
 @bot.event
 async def on_ready():
@@ -117,4 +116,5 @@ async def yardım(ctx):
     await ctx.send(embed=embed)
 
 
-    bot.run('ODk2NzkxMDYyNTk1NjYxOTA0.YWMPwg.9flW1QbFU7cJyaeq0V5mDXXCy9M')
+
+bot.run('ODk2NzkxMDYyNTk1NjYxOTA0.YWMPwg.9flW1QbFU7cJyaeq0V5mDXXCy9M')
