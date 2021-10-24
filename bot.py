@@ -24,7 +24,7 @@ bot.add_cog(BeansEconomyCog(bot, DATABASE_URL))
 @bot.event
 async def on_ready():
     print("Göreve Hazır!")
-    game = discord.Game("Patri help")    
+    game = discord.Game("Asker yardım! Prefixim ,")    
     await bot.change_presence(status=discord.Status.idle, activity=game)
 
 #Basic Commands
@@ -34,7 +34,7 @@ async def ping(ctx):
     await ctx.send(f':ping_pong: Pong! {round(bot.latency * 1000)} ms')
 
 @bot.command()
-async def say(ctx, *, arg):
+async def de(ctx, *, arg):
     await ctx.send(f'{arg}')
 
 @bot.command()
