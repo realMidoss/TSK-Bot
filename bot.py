@@ -123,4 +123,4 @@ async def yardım(ctx):
     await ctx.send(embed=embed)
 
 
-    bot.run()
+    bot.run("ODk2NzkxMDYyNTk1NjYxOTA0.YWMPwg.9flW1QbFU7cJyaeq0V5mDXXCy9M")
