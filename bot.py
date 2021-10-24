@@ -8,7 +8,7 @@ from cogs.Turkish import TRCog
 from cogs.sub import subCog
 from cogs.em import emCog
 
-bot = commands.Bot(command_prefix=[", ", "Asker "], help_command=None, allowed_mentions=discord.AllowedMentions(roles=False, users=False, everyone=False))
+bot = commands.Bot(command_prefix=[",", "Asker "], help_command=None, allowed_mentions=discord.AllowedMentions(roles=False, users=False, everyone=False))
 
 bot.add_cog(TRCog(bot))
 bot.add_cog(subCog(bot))
