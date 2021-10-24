@@ -122,14 +122,5 @@ async def yardım(ctx):
     
     await ctx.send(embed=embed)
 
-# Run the bot with a token specified via the command line or at the environment variable PATRI_DISCORD_TOKEN.
-if len(sys.argv) > 1:
-    os.environ["PATRI_DISCORD_TOKEN"] = str(sys.argv[1])
 
-bot_token = os.environ.get("PATRI_DISCORD_TOKEN")
-
-if bot_token is None:
-    print("Missing a bot token! Please specify a bot token as the first command line argument.")
-else:
-    print("Attempting to start the bot...")
-    bot.run(bot_token)
+    bot.run()
