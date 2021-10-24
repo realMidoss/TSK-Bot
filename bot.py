@@ -9,12 +9,6 @@ from cogs.sub import subCog
 from cogs.em import emCog
 from cogs.economy import BeansEconomyCog
 
-# From Heroku's own docs
-DATABASE_URL = os.environ.get("DATABASE_URL")
-
-if DATABASE_URL is None:
-    DATABASE_URL = "postgres://postgres:password@127.0.0.1:5432/patridb"
-
 bot = commands.Bot(command_prefix=[", ", "Asker " ], help_command=None, allowed_mentions=discord.AllowedMentions(roles=False, users=False, everyone=False))
 bot.add_cog(TRCog(bot))
 bot.add_cog(subCog(bot))
@@ -27,7 +21,7 @@ async def on_ready():
     game = discord.Game("Asker yardım! Prefixim ,")    
     await bot.change_presence(status=discord.Status.idle, activity=game)
 
-#Basic Commands
+#Basit
 
 @bot.command()
 async def ping(ctx):
@@ -108,7 +102,7 @@ async def ban(ctx, victim:discord.Member, *, reason= None):
     
     await ctx.send("Forgiven") 
 
-#help command
+#yardım
 
 @bot.group(invoke_without_command=True)
 async def yardım(ctx):
