@@ -115,6 +115,14 @@ async def yardım(ctx):
     
     await ctx.send(embed=embed)
 
+# Run the bot with a token specified via the command line or at the environment variable PATRI_DISCORD_TOKEN.
+if len(sys.argv) > 1:
+    os.environ["TSK_DISCORD_TOKEN"] = str(sys.argv[1])
 
+bot_token = os.environ.get("TSK_DISCORD_TOKEN")
 
-bot.run('ODk2NzkxMDYyNTk1NjYxOTA0.YWMPwg.9flW1QbFU7cJyaeq0V5mDXXCy9M')
+if bot_token is None:
+    print("Token yok amuğoyum")
+else:
+    print("Attempting to start the bot...")
+    bot.run(bot_token)
