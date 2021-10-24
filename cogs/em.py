@@ -8,7 +8,7 @@ class emCog(commands.Cog, name="Sub"):
 
 
     @commands.command()
-    async def isgal(self, ctx):
+    async def işgal(self, ctx):
 
         ww2 = [
         "https://thumbs.gfycat.com/AdventurousUnknownFiddlercrab-size_restricted.gif",
