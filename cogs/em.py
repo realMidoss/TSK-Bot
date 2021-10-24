@@ -8,7 +8,7 @@ class emCog(commands.Cog, name="Sub"):
 
 
     @commands.command()
-    async def invade(self, ctx):
+    async def işgal(self, ctx):
 
         ww2 = [
         "https://thumbs.gfycat.com/AdventurousUnknownFiddlercrab-size_restricted.gif",
@@ -19,46 +19,25 @@ class emCog(commands.Cog, name="Sub"):
         "https://thumbs.gfycat.com/WelloffAdventurousArkshell-size_restricted.gif"  
         ]
 
-        embed = discord.Embed(title="Für Das Vaterland", description="Über Alles!", color=discord.Color.red())
+        embed = discord.Embed(title="Her şey vatan için!", description="Savulun Ulan deyyuslar!!!", color=discord.Color.red())
         embed.set_image(url=random.choice(ww2))
 
         await ctx.send(embed=embed)
 
     @commands.command()
-    async def marry(self, ctx,user:discord.Member = None):
+    async def vur(self, ctx,user:discord.Member = None):
         if user is None:
-            await ctx.send("You need to marry with someone right? Tag that one!")
-            return
-        if user==ctx.author:
-            await ctx.send("You sadly cant marry yourself...")
-            return
-        
-        marriage = [
-        "https://media.giphy.com/media/13V4HjgAOIhvDq/giphy.gif",
-        "https://data.whicdn.com/images/282240022/original.gif",
-        "https://pa1.narvii.com/6220/724eef7024976360a3d683bed7531b951fefffb0_00.gif",
-        "https://i.pinimg.com/originals/0e/5a/e8/0e5ae8c0c07c847e1f8c4d1c8665872f.gif",
-        "https://pa1.narvii.com/6505/af2b8c242ffdb5300dd1bf83a2587e44b1d12298_00.gif",]
-
-        embed = discord.Embed(title=f"{ctx.author.name} marries to {user.name}", description="Ahhh... So cute! I'm blushing", color=ctx.author.color)
-        embed.set_image(url=random.choice(marriage))
-
-        await ctx.send(embed=embed)
-
-    @commands.command()
-    async def kill(self, ctx,user:discord.Member = None):
-        if user is None:
-            await ctx.send("You must mention your target")
+            await ctx.send("Kimi vurayım?")
             return
 
         if user==ctx.author:
             
             intihar = [
-            "https://data.whicdn.com/images/89750923/original.gif",
-            "https://64.media.tumblr.com/130a00d77bd535456e4518cf1f9397f9/tumblr_pdf9aaSUmM1xci9v9o2_500.gif",
-            "https://data.whicdn.com/images/251664843/original.gif",]
+            "https://media2.giphy.com/media/9EQD6VsEbMEb6/giphy.gif",
+            "https://galeri14.uludagsozluk.com/776/hoslanilan-kizi-3-erkekle-kahkaha-atarken-gormek_1519340.gif",
+            "https://thumbs.gfycat.com/AdorableAggravatingCaimanlizard-max-1mb.gif",]
 
-            embed = discord.Embed(title=f"{ctx.author.name} commited suicide ", description="F")
+            embed = discord.Embed(title=f"{ctx.author.name} intihar etti ", description="F")
             embed.set_image(url=random.choice(intihar))  
             
             await ctx.send(embed=embed)
@@ -66,11 +45,11 @@ class emCog(commands.Cog, name="Sub"):
             return
         
         killv = [
-        "https://i.kym-cdn.com/photos/images/original/000/978/568/24f.gif",
-        "https://i.pinimg.com/originals/d4/bb/e2/d4bbe21cfe5993e13173c4692db757d0.gif",
-        "https://i.kym-cdn.com/photos/images/newsfeed/000/637/941/20b.gif",] 
+        "https://c.tenor.com/2LpRjHPPMdAAAAAC/military.gif",
+        "https://i.pinimg.com/originals/4d/03/1b/4d031bee032331b45718aec28bcd7993.gif",
+        "https://i2.milimaj.com/i/milliyet/75/0x0/5edb4202554287169cb60b2c.gif",] 
 
-        embed = discord.Embed(title=f"{ctx.author.name} kills {user.name}", description="Bam Bam Bam", color=discord.Color.dark_red())
+        embed = discord.Embed(title=f"{ctx.author.name}'nın namlusunun ucunda {user.name}", description="Bam Bam Bam", color=discord.Color.dark_red())
         embed.set_image(url=random.choice(killv)) 
 
         await ctx.send(embed=embed)    
@@ -78,26 +57,27 @@ class emCog(commands.Cog, name="Sub"):
     @commands.command()
     async def bruh(self, ctx):
         
-        embed = discord.Embed(title=f"{ctx.author.name} thinks its a bro moment", description="Bro moment is such a moment;", color=discord.Color.darker_gray())
+        embed = discord.Embed(title=f"{ctx.author.name}, bunun bir bilader anı olduğnu düşünüyor", description="birader anı;", color=discord.Color.darker_gray())
         embed.set_image(url="https://i.ytimg.com/vi/ZF57zsOWdB0/maxresdefault.jpg")
 
         await ctx.send(embed=embed)
 
     @commands.command()
-    async def declarecommunism(self, ctx):
+    async def kızıl_devrim(self, ctx):
 
         komün = [
         "https://media2.giphy.com/media/RMrNQ0HszuxzmvdBdw/giphy.gif",
         "https://31.media.tumblr.com/1c34ba04ed84aa28afa59511a1b4f99c/tumblr_inline_np4407k8KS1rfowug_500.gif",
-        "https://pa1.narvii.com/7147/2d29995dcaf867d19fc76e00a2077bb93c2429fdr1-380-335_hq.gif",
         ]
-        embed = discord.Embed(title=f"Stalin would be proud of you comrade {ctx.author}", description="For The Soviet Union!", color=discord.Color.dark_red())
+        embed = discord.Embed(title=f"vay amk komünisti seni {ctx.author}", description="SG lan bu sunucudan", color=discord.Color.dark_red())
         embed.set_image(url=random.choice(komün)) 
 
         await ctx.send(embed=embed)
 
+    #Burda Kaldın
+
     @commands.command()
-    async def hug(self, ctx,user:discord.Member = None):
+    async def sarıl(self, ctx,user:discord.Member = None):
         if user is None:
             await ctx.send("You can't hug air. Tag our lucky boy UwU")
             return
