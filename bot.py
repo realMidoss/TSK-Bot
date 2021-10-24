@@ -17,7 +17,7 @@ bot.add_cog(emCog(bot))
 @bot.event
 async def on_ready():
     print("Göreve Hazır!")
-    game = discord.Game("Asker yardım! Prefixim ,")    
+    game = discord.Game("Asker yardım! Prefixim "," ")
     await bot.change_presence(status=discord.Status.idle, activity=game)
 
 #Basit
