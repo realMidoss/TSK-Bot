@@ -4,13 +4,11 @@ import random
 import asyncio
 import sys
 import os
-from cogs.Turkish import TRCog
 from cogs.sub import subCog
 from cogs.em import emCog
 
 bot = commands.Bot(command_prefix=[",", "Asker "], help_command=None, allowed_mentions=discord.AllowedMentions(roles=False, users=False, everyone=False))
 
-bot.add_cog(TRCog(bot))
 bot.add_cog(subCog(bot))
 bot.add_cog(emCog(bot))
 
@@ -110,8 +108,8 @@ async def yardım(ctx):
     embed.set_thumbnail(url="https://cdn.freelogovectors.net/wp-content/uploads/2020/12/turk-silahli-kuvvetleri-logo.png")
     
     embed.add_field(name="yardım", value="Bu mesajı gösterir", inline=False)
-    embed.add_field(name="Fun Commands", value="ara, ban, bruh, bonk, bully, declarecommunism, F, hug, invade, kick, kill, kiss, lap, marry, nuke, pat, say, suck, warn, question")
-    embed.add_field(name="Useful Commands", value="pfp, ping, poll, info, vote")
+    embed.add_field(name="Eğlence Komutları", value="bruh, f35, F, işgal, kick, kızıl_devrim, pat, sarıl, sor, söv, vur, çay,")
+    embed.add_field(name="Bi Sike Yarayan Komutlar", value="pp, ping, oy, bilgi, anket")
     
     await ctx.send(embed=embed)
 
