@@ -6,6 +6,7 @@ import sys
 import os
 from cogs.sub import subCog
 from cogs.em import emCog
+import requests
 
 bot = commands.Bot(command_prefix=[",", "Asker "], help_command=None, allowed_mentions=discord.AllowedMentions(roles=False, users=False, everyone=False))
 
@@ -112,6 +113,8 @@ async def yardım(ctx):
     embed.add_field(name="Bi Sike Yarayan Komutlar", value="pp, ping, oy, bilgi, anket")
     
     await ctx.send(embed=embed)
+
+#Doviz
 
 # Run the bot with a token specified via the command line or at the environment variable PATRI_DISCORD_TOKEN.
 if len(sys.argv) > 1:
