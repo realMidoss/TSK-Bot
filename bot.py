@@ -60,8 +60,8 @@ async def bomba(ctx):
         await ctx.send("İptal Edildi")
     
     if str(reaction.emoji) == yas:
-        embed = discord.Embed(title="Kod:3131 Aktif, Bombalar Ateşlendi", description=f"{ctx.author.name}'nin Emriyle bombalam işlemi gerçekleştirildi", color=discord.Color.dark_red())
-        embed.set_image(url="https://galeri8.uludagsozluk.com/415/gif_851233.gif")
+        embed = discord.Embed(title="Kod:3131 Aktif, Bombalar Ateşlendi", description=f"{ctx.author.name}'nin Emriyle bombalama işlemi gerçekleştirildi", color=discord.Color.dark_red())
+        embed.set_image(url="https://bestanimations.com/media/nuclear-explosions/726046542nuclear-atom-bomg-explosion-animated-gif-4.gif")
         return await ctx.send(embed=embed)
     
     await ctx.send("Süreç Terk Edildi") 
