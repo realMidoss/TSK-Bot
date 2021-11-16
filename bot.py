@@ -8,10 +8,13 @@ from cogs.sub import subCog
 from cogs.em import emCog
 import requests
 
-bot = commands.Bot(command_prefix=[",", "Asker "], help_command=None, allowed_mentions=discord.AllowedMentions(roles=False, users=False, everyone=False))
+# From Heroku's own docs
+DATABASE_URL = os.environ.get("DATABASE_URL")
 
-bot.add_cog(subCog(bot))
-bot.add_cog(emCog(bot))
+if DATABASE_URL is None:
+    DATABASE_URL = "postgres://postgres:password@127.0.0.1:5432/patridb"
+
+bot = commands.Bot(command_prefix=[",", "Asker "], help_command=None, allowed_mentions=discord.AllowedMentions(roles=False, users=False, everyone=False))
 
 @bot.event
 async def on_ready():
