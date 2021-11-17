@@ -113,6 +113,22 @@ async def yardım(ctx):
 
 #Doviz
 
+@bot.command()
+async def doviz(ctx):
+
+    results = requests.get('https://api.genelpara.com/embed/doviz.json').json()
+    content = results['USD']['satis']
+    EUR = results['EUR']['satis']
+    GBP = results['GBP']['satis']
+    
+    embed = discord.Embed(title="Kur Fiyatları", description="Ekonomi çok iyi moruk!")
+    embed.set_thumbnail(url="https://www.krttv.com.tr/images/haberler/2020/05/berat_albayrak_yine_link_verdi_h36179_65dec.png")
+    embed.add_field(name="USD: ", value=f"{content}")
+    embed.add_field(name="EUR: ", value=f"{EUR}")
+    embed.add_field(name="GBP: ", value=f"{GBP}")
+
+    await ctx.send(embed=embed)
+
 # Run the bot with a token specified via the command line or at the environment variable PATRI_DISCORD_TOKEN.
 if len(sys.argv) > 1:
     os.environ["TSK_DISCORD_TOKEN"] = str(sys.argv[1])
