@@ -107,7 +107,7 @@ async def yardım(ctx):
     
     embed.add_field(name="yardım", value="Bu mesajı gösterir", inline=False)
     embed.add_field(name="Eğlence Komutları", value="bruh, f35, F, işgal, kick, kızıl_devrim, pat, sarıl, sor, söv, vur, çay,")
-    embed.add_field(name="Bi Sike Yarayan Komutlar", value="pp, ping, oy, bilgi, anket")
+    embed.add_field(name="Bi Sike Yarayan Komutlar", value="pp, ping, oy, doviz,  bilgi, anket")
     
     await ctx.send(embed=embed)
 
