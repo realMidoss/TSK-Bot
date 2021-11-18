@@ -125,7 +125,6 @@ async def doviz(ctx):
     
     embed = discord.Embed(title="Kur Fiyatları", description="Ekonomi çok iyi moruk!")
     embed.set_thumbnail(url="https://www.krttv.com.tr/images/haberler/2020/05/berat_albayrak_yine_link_verdi_h36179_65dec.png")
-    embed.timestamp = datetime.datetime.utcnow()
     embed.add_field(name="USD: ", value=f"{content}")
     embed.add_field(name="EUR: ", value=f"{EUR}")
     embed.add_field(name="GBP: ", value=f"{GBP}")
