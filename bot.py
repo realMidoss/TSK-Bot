@@ -116,12 +116,12 @@ async def yardım(ctx):
 @bot.command()
 async def doviz(ctx):
 
-    results = requests.get('https://api.genelpara.com/embed/doviz.json').json()
-    content = results['USD']['satis']
-    EUR = results['EUR']['satis']
-    GBP = results['GBP']['satis']
+    results = requests.get('https://finans.truncgil.com/today.json').json()
+    content = results['USD']['Satış']
+    EUR = results['EUR']['Satış']
+    GBP = results['GBP']['Satış']
     
-    embed = discord.Embed(title="Kur Fiyatları", description="Ekonomi çok iyi moruk!!")
+    embed = discord.Embed(title="Kur Fiyatları", description="Ekonomi çok iyi moruk!")
     embed.set_thumbnail(url="https://www.krttv.com.tr/images/haberler/2020/05/berat_albayrak_yine_link_verdi_h36179_65dec.png")
     embed.add_field(name="USD: ", value=f"{content}")
     embed.add_field(name="EUR: ", value=f"{EUR}")
