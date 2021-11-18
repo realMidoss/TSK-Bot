@@ -122,12 +122,14 @@ async def doviz(ctx):
     content = results['USD']['Satış']
     EUR = results['EUR']['Satış']
     GBP = results['GBP']['Satış']
-    
-    embed = discord.Embed(title="Kur Fiyatları", description="Ekonomi çok iyi moruk!")
+    T = results["Update_Date"]
+
+    embed = discord.Embed(title="Kur Fiyatları", description=f"Ekonomi çok iyi kardeşim")
     embed.set_thumbnail(url="https://www.krttv.com.tr/images/haberler/2020/05/berat_albayrak_yine_link_verdi_h36179_65dec.png")
     embed.add_field(name="USD: ", value=f"{content}")
     embed.add_field(name="EUR: ", value=f"{EUR}")
     embed.add_field(name="GBP: ", value=f"{GBP}")
+    embed.add_field(name="Son Güncelleme: ",value=f"{T}")
 
     await ctx.send(embed=embed)
 
