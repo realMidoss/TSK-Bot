@@ -9,6 +9,8 @@ from cogs.em import emCog
 import requests
 
 bot = commands.Bot(command_prefix=[",", "Asker ", "asker"], help_command=None, allowed_mentions=discord.AllowedMentions(roles=False, users=False, everyone=False))
+bot.add_cog(subCog(bot))
+bot.add_cog(emCog(bot))
 
 @bot.event
 async def on_ready():
